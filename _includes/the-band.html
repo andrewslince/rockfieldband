@@ -1,0 +1,43 @@
+<section id="the-band" class="section">
+  <div class="wrapper">
+    <h2>a banda</h2>
+    <div class="content">
+      <img src="/img/blank.gif" data-echo="/img/banda.jpg" width="860" height="573" class="lazy" alt="A banda">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Laborum explicabo, sit ad saepe cum unde quibusdam
+        perferendis voluptatum ullam esse, id magni nihil reiciendis sunt
+        accusantium excepturi atque consequuntur cupiditate. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Laborum explicabo,
+        sit ad saepe cum unde quibusdam perferendis voluptatum ullam esse,
+        id magni nihil reiciendis sunt accusantium excepturi atque
+        consequuntur cupiditate.
+      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Laborum explicabo, sit ad saepe cum unde quibusdam
+        perferendis voluptatum ullam esse, id magni nihil reiciendis sunt
+        accusantium excepturi atque consequuntur cupiditate. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Laborum explicabo,
+        sit ad saepe cum unde quibusdam perferendis voluptatum ullam esse,
+        id magni nihil reiciendis sunt accusantium excepturi atque
+        consequuntur cupiditate.
+      </p>
+      <h3>integrantes</h3>
+      <ul class="members">
+        {% for member in site.members_line_one %}
+          <li>
+            <img src="/img/blank.gif" data-echo="/img/{{ member.img }}" width="413" height="413" class="lazy" alt="{{ member.name }}">
+            <h4>{{ member.name }} <em>&raquo;</em> <strong>{{ member.instrument }}</strong></h4>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="members">
+        {% for member in site.members_line_two %}
+          <li>
+            <img src="/img/blank.gif" data-echo="/img/{{ member.img }}" width="413" height="413" class="lazy" alt="{{ member.name }}">
+            <h4>{{ member.name }} <em>&raquo;</em> <strong>{{ member.instrument }}</strong></h4>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

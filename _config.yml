@@ -1,0 +1,52 @@
+# Site settings
+title: Rockfield Band
+email: rockfieldshow@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://rockfieldband.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Quote phrase
+quote:
+  phrase: "O Rock n' Roll é o maior amor da minha vida, pois foi através dele que cheguei a todos os outros."
+  author: "Ozzy Osbourne"
+
+# Members
+members_line_one:
+  -
+    name: "Andrews Lince"
+    img: "kaka.jpg"
+    instrument: "Vocal"
+  -
+    name: "Carlos Souza"
+    img: "carlos.jpg"
+    instrument: "Bateria"
+members_line_two:
+  -
+    name: "Paulo Najar"
+    img: "paulo.jpg"
+    instrument: "Guitarra"
+  -
+    name: "Ricardo Morais"
+    img: "ricardo.jpg"
+    instrument: "Baixo"
+
+# Social network
+social_networks:
+  -
+    name: "instagram"
+    link: "https://instagram.com/rockfieldband/"
+    class: "ig"
+  -
+    name: "soundcloud"
+    link: "https://soundcloud.com/rockfieldband/"
+    class: "sc"
+  -
+    name: "google+"
+    link: "https://plus.google.com/b/118272781192808551017/118272781192808551017/"
+    class: "go"
+  -
+    name: "facebook"
+    link: "https://www.facebook.com/rockfieldband/"
+    class: "fb"

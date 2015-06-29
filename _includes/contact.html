@@ -1,0 +1,51 @@
+<section id="contact" class="section">
+  <div class="wrapper">
+    <h2 id="contato">contato</h2>
+    <div class="content">
+    
+      <p>
+        gostou do nosso som? quer nos contratar? viu nosso show e
+        gostaria de mandar seu feedback pra gente? então nos envie sua
+        crítica, elogio ou sugestão através do formulário abaixo e saiba
+        que teremos muito prazer em responder o seu contato!
+      </p>
+      <form action="/" class="contact" onsubmit="return sendContactMessage(this);">
+        <div class="row">
+          <em>*</em>
+          <input type="text" placeholder="nome">
+        </div>
+        <div class="row">
+          <em>*</em>
+          <input type="email" placeholder="email">
+        </div>
+        <div class="row">
+          <em>*</em>
+          <textarea placeholder="mensagem"></textarea>
+        </div>
+        <div class="row right">
+          <span class="required-fields"><em>*</em>campos obrigatórios</span>
+          <input type="submit" class="submit" value="enviar">
+        </div>
+      </form>
+
+      <h3>redes sociais</h3>
+      <p>
+        não deixe de acompanhar a Rockfield também através das redes
+        sociais. siga a gente, curta, compartilhe nosso conteúdo com seus
+        amigos e nos ajude a divulgar cada vez a banda e o rock da cidade
+        de Manaus.
+      </p>
+      <ul class="social-media bottom">
+        {% for network in site.social_networks %}
+          <li>
+            <a target="_blank" href="{{ network.link }}">
+              <i class="{{ network.class }}"></i>
+              {{ network.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</section>

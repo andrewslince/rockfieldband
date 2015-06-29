@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+
+      {% if page.path == "index.html" %}
+
+        <div class="wrapper">{% include blockquote.html %}</div>
+
+        {% include musics.html %}
+        
+        {% include the-band.html %}
+
+        {% include contact.html %}
+
+      {% else %}
+
+        <div class="wrapper">
+
+          {{ content }}
+
+        </div>
+
+      {% endif %}
+
+    </div>
+
+    <script src="/js/smooth-scroll.js"></script>
+    <script src="/js/echo.js"></script>
+    <script src="/js/main.js"></script>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,31 @@
+<header class="header">
+
+  <div class="wrapper">
+
+    <h1 class="logo">{{ site.title }}</h1>
+
+    <nav class="nav">
+      <span>Rockfield Band</span>
+      <ul>
+        <li><a href="javascript:void(0);" onclick="menuNav('#musics');">MÚSICAS</a></li>
+        <li><a href="javascript:void(0);" onclick="menuNav('#the-band');">A BANDA</a></li>
+        <li><a href="javascript:void(0);" onclick="menuNav('#contact');">CONTATO</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-media bar">
+      <ul>
+        {% for network in site.social_networks %}
+          <li>
+            <a target="_blank" href="{{ network.link }}">
+              <i class="{{ network.class }}"></i>
+              {{ network.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+
+</header>

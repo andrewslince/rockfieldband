@@ -1,0 +1,657 @@
+.logo {
+    margin: 20px auto 0 auto;
+    display: block;
+    color: transparent !important;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+        @include rotate45;
+    }
+}
+
+
+/**
+ * Menu Navigation
+ */
+.nav {
+
+    margin-top: 20px;
+    text-align: center;
+
+    @include transition;
+
+    span {
+        display: none;
+    }
+
+    ul {
+
+        li {
+
+            display: inline;
+
+            a {
+                color: #fff;
+                line-height: $base-line-height;
+                text-transform: uppercase;
+                font-family: "CaviarDreams";
+                font-size: 28px;
+                text-decoration: none;
+                padding-bottom: 3px;
+                outline: none;
+                margin-left: 60px;
+
+                &:hover,
+                &:focus {
+                    color:$orange-color !important;
+                    text-shadow: #000 2px 2px 1px;
+                }
+            }
+
+            &:first-child a {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+    }
+
+    /**
+     * Floating Menu Navigation
+     */
+    &.floating {
+        background-color: #000;
+        position: fixed;
+        top: 0 !important;
+        left:0;
+        margin-top: 0;
+        width: 100%;
+        z-index: 2;
+        padding: 20px;
+        opacity: 0.98;
+
+        @include transition;
+
+        span {
+            float: left;
+            font-size: 25px;
+            font-weight: bold;
+            color: $orange-color;
+            font-family: "CaviarDreams";
+            margin-left: 10px;
+            display: block;
+        }
+
+        ul {
+            text-align: right;
+            margin-bottom: 0;
+            padding-right: 20px;
+
+            li a {
+                font-size: 18px;
+                margin-left: 40px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+
+/**
+ * Social Media
+ */
+.social-media {
+
+
+    ul {
+
+        li {
+            padding: 8px 0;
+
+            a {
+                color: transparent;
+                display: block;
+                width: 48px;
+                height: 48px;
+                @include full-radius;
+                @include transition;
+
+                &:hover,
+                &:focus {
+                    @include hover-social-icon;
+                }
+
+            }
+        }
+
+        i {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+
+    /**
+     * Floating bar
+     */
+    &.bar {
+        background-color: #000;
+        opacity: 0.8;
+        position: fixed;
+        right: 0;
+        top: 27%;
+        z-index: 1;
+        padding: 10px 20px;
+    }
+
+    /**
+     * Contact section
+     */
+    &.bottom {
+        margin: 0;
+        text-align: center;
+
+        li {
+            background-position: center left;
+            margin-top: 20px;
+            height: 48px;
+            width: 24%;
+            display: inline-block;
+
+            i {
+                display: block;
+                width: 48px;
+                height: 48px;
+                margin: auto;
+                @include transition;
+                @include full-radius;
+            }
+
+            a {
+                display: block;
+                line-height: 45px;
+                text-align: center !important;
+                text-align: left;
+                font-family: "CaviarDreams";
+                font-size: 23px;
+
+                &:hover,
+                &:focus {
+
+                    & > i {
+                        @include hover-social-icon;
+                    }
+
+                    color: $orange-color;
+                    text-decoration: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * Sections
+ */
+.section {
+
+    margin-top: 50px;
+
+    .wrapper {
+        margin: auto;
+        width: $content-width;
+        background: #000;
+        padding: 40px;
+        opacity: 0.75;
+
+        h2 {
+            border-left: 5px $orange-color solid;
+            padding-left: 20px;
+            margin-bottom: 40px;
+            font-family: "CaviarDreams";
+            font-size: 40px;
+            color: $orange-color;
+        }
+
+        h3 {
+            color: $orange-color;
+            clear: both;
+            font-family: "CaviarDreams";
+            font-size: 30px;
+            border-top: 1px #aaa solid;
+            margin-top: 40px;
+            padding: 10px 0;
+        }
+
+        .content {
+            color: #ccc;
+            font-size: 18px;
+            text-align: justify;
+            line-height: 30px;
+        }
+
+        iframe {
+            display: block;
+        }
+    }
+}
+
+
+/**
+ * Musics
+ */
+#musics {
+    iframe {
+        width: 100%;
+        border: none;
+    }
+}
+
+
+/**
+ * Members
+ */
+#the-band {
+    .content > img {
+        margin-bottom:20px;
+    }
+
+    .members {
+        text-align: center;
+        margin-left: 0;
+
+        li {
+            width: 48%;
+            height: 3px 50px;
+            display: inline-block;
+            margin: 20px 21px 0 0;
+
+            &:last-child {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            img {
+                @include full-radius;
+                width: 100%;
+                height: 405px;
+                border: none;
+                outline: none;
+                display: block;
+            }
+
+            h4 {
+                font-family: "CaviarDreams";
+                font-size: 22px;
+                text-transform: uppercase;
+                margin: 10px 0 0 0;
+
+                & strong {
+                    color: $orange-color;
+                }
+
+                & em {
+                    line-height: 10px;
+                }
+            }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+    }
+}
+
+
+/**
+ * Contact Form
+ */
+.contact {
+
+    margin-top: 40px;
+    height: 485px;
+
+    .row {
+        width: 100%;
+        margin-bottom: 40px;
+        position: relative;
+
+        em {
+            color: #b80207;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 30px;
+
+            @include full-radius;
+        }
+
+        input,
+        textarea {
+            font-family: Helvetica;
+            font-size: 18px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px #aaa solid;
+            border-left: 1px #aaa solid;
+            color: #aaa;
+            outline: none;
+            padding: 15px 20px 15px 40px;
+            width: 100%;
+
+            &[type="text"] {
+                text-transform: uppercase;
+
+                &::-webkit-input-placeholder {
+                   text-transform:lowercase;
+                }
+
+                &:-moz-placeholder {
+                   text-transform:lowercase;
+                }
+
+                &::-moz-placeholder {
+                   text-transform:lowercase;
+                }
+
+                &:-ms-input-placeholder {  
+                   text-transform:lowercase;
+                }
+            }
+
+            &[type="email"] {
+                text-transform: lowercase;
+            }
+
+            &:focus {
+                border-left-color: $orange-color;
+                border-bottom-color: $orange-color;
+            }
+        }
+
+        textarea {
+            display: block;
+            resize: none;
+            min-height: 200px;
+        }
+
+        .submit {
+            background: #333 url("../img/send.png") no-repeat 110px center;
+            border: 1px #333 solid;
+            font-family: "CaviarDreams";
+            font-size: 23px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 160px;
+            text-align: left;
+            padding-left: 23px;
+            @include transition;
+
+            &:hover,
+            &:focus {
+                background-color: $orange-color;
+                border-color: $orange-color;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+        &.error input,
+        &.error textarea {
+            border-left-color: #b80207 !important;
+            border-bottom-color: #b80207 !important;
+            background-color: #200001;
+        }
+
+        &.right {
+            text-align: right;
+
+            em {
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight: normal;
+                top: 0;
+                left: 0;
+            }
+
+            .required-fields {
+                color: #b80207;
+                float: left;
+                font-family: "CaviarDreams";
+                font-size: 22px;
+                font-weight: bold;
+                padding-left: 25px;
+            }
+        }
+    }
+
+    #sent-message {
+        text-align: center;
+        padding-top: 80px;
+        font-family: "CaviarDreams";
+
+        i {
+            margin-bottom: 30px;
+
+            @include transition;
+
+            &.animate {
+                @include scale1-3;
+            }
+        }
+
+        h4 {
+            color: #239a00;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: bold;
+            width: 650px;
+            margin: auto;
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+}
+
+
+/**
+ * Site footer
+ */
+.footer {
+    background: #000;
+    margin-top: 10px;
+    padding: $spacing-unit 0;
+    opacity: 0.8;
+
+    .wrapper {
+        padding: 0;
+        height: 105px;
+
+        i {
+            @include transition;
+
+            &:hover {
+                @include rotate45;
+            }
+        }
+    }
+
+    .copyright {
+        text-align:right;
+        font-size:15px;
+        display:block;
+        color: #fff;
+        font-family: "CaviarDreams";
+        line-height: 23px;
+        padding-top: 15px;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: bold;
+            font-size: 17px;
+            outline: none;
+        }
+    }
+}
+
+
+/**
+ * Go to top button
+ */
+#go-to-top {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    /*background: #fff url("../img/arrow-top.png") no-repeat center center;*/
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.85;
+    box-shadow: #000 1px 1px 1px;
+    text-align: center;
+    @include full-radius;
+    @include transition;
+
+    &:hover {
+        @include scale1-3;
+        cursor: pointer;
+    }
+
+    i {
+        margin-top: 20px;
+    }
+}
+
+
+@include media-query($on-laptop) {
+    
+}
+
+@include media-query($on-palm) {
+    
+}
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: 0 0 30px 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+/**
+ * Firefox Hacks
+ */
+@-moz-document url-prefix() { 
+    blockquote {
+        font-size: 25px;
+        line-height: 45px;
+
+        .quote {
+            font-family: Arial;
+            top: 95px;
+        }
+
+    }
+
+    .contact {
+        .row {
+            .submit {
+                background: #333 url("../img/send.png") no-repeat scroll 120px center;
+                width: 170px;
+            }
+        }
+    }
+}
