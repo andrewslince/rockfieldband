@@ -321,21 +321,31 @@
 .contact {
 
     margin-top: 40px;
-    height: 495px;
+    height: 515px;
 
     .row {
         width: 100%;
         margin-bottom: 40px;
         position: relative;
 
-        em {
+        i {
             color: #b80207;
             position: absolute;
-            top: 15px;
+            top: 20px;
             left: 15px;
             font-size: 30px;
+        }
 
-            @include full-radius;
+        em {
+            display: none;
+            position: absolute;
+            top: -16px;
+            right: 20px;
+            font-style: italic;
+            font-size: 15px;
+            background-color: #b80207;
+            padding: 0 18px;
+            border: 1px #555 dotted;
         }
 
         input,
@@ -348,7 +358,7 @@
             border-left: 1px #aaa solid;
             color: #aaa;
             outline: none;
-            padding: 15px 20px 15px 40px;
+            padding: 20px 20px 20px 40px;
             width: 100%;
 
             &[type="text"] {
@@ -405,7 +415,6 @@
                 font-family: "CaviarDreams";
                 font-size: 20px;
                 font-weight: bold;
-                letter-spacing: 1px;
             }
 
             &:hover,
@@ -431,11 +440,12 @@
         &.right {
             text-align: right;
 
-            em {
+            i {
                 font-family: Helvetica, Arial, sans-serif;
                 font-weight: normal;
-                top: 15px;
+                top: 0;
                 left: 0;
+                position: relative;
             }
         }
     }
@@ -446,7 +456,11 @@
         font-family: "CaviarDreams";
         font-size: 22px;
         font-weight: bold;
-        padding: 15px 0 0 20px;
+        padding: 15px 0 0 0;
+
+        i {
+            margin-right: 5px;
+        }
     }
 
     #sent-message {
@@ -656,14 +670,5 @@
             top: 95px;
         }
 
-    }
-
-    .contact {
-        .row {
-            .submit {
-                background: #333 url("../img/send.png") no-repeat scroll 120px center;
-                width: 170px;
-            }
-        }
     }
 }

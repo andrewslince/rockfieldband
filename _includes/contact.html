@@ -9,21 +9,24 @@
         crítica, elogio ou sugestão através do formulário abaixo e saiba
         que teremos muito prazer em responder o seu contato!
       </p>
-      <form action="/" class="contact" onsubmit="return sendContactMessage(this);">
+      <form action="/" class="contact" onsubmit="return sendContactMessage(this);" novalidate>
         <div class="row">
-          <em>*</em>
+          <i>*</i>
+          <em></em>
           <input type="text" placeholder="nome">
         </div>
         <div class="row">
-          <em>*</em>
+          <i>*</i>
+          <em></em>
           <input type="email" placeholder="email">
         </div>
         <div class="row">
-          <em>*</em>
+          <i>*</i>
+          <em></em>
           <textarea placeholder="mensagem"></textarea>
         </div>
         <div class="row right">
-          <span class="required-fields"><em>*</em>campos obrigatórios</span>
+          <span class="required-fields"><i>*</i>campos obrigatórios</span>
           <button type="submit" class="submit">
             <span>enviar mensagem</span>
             <i class="send"></i>

@@ -16,18 +16,46 @@ function dbg(data) {
     console.log(data);
 }
 
+function _isValidEmail(email) {
+    var isValidEmail = false,
+        regexPattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+
+    if (email !== undefined && typeof(email) === "string") {
+        isValidEmail = regexPattern.test(email);
+    }
+
+    return isValidEmail;
+}
+
+function _removeValidationError(fieldWrapper) {
+
+    // remove class error on field wrapper
+    fieldWrapper.classList.remove("error");
+
+    // hides error message
+    fieldWrapper.querySelector("em").style.display = "none";
+}
+
+function _setValidationError(fieldWrapper, message) {
+
+    // set class error on field wrapper
+    fieldWrapper.classList.add("error");
+
+    // set error message
+    fieldWrapper.querySelector("em").innerHTML = message;
+    
+    // displays error message
+    fieldWrapper.querySelector("em").style.display = "block";
+}
+
 function sendContactMessage(frm) {
-    var frmIsValid = true,
-        fieldValue = "",
-        htmlOutput = "",
-        frmFields  = frm.querySelectorAll(
+    var frmIsValid   = true,
+        fieldWrapper = null,
+        fieldValue   = "",
+        htmlOutput   = "",
+        frmFields    = frm.querySelectorAll(
             "input[type='text'], input[type='email'], textarea"
         );
-
-    // clean current errors
-    for (var i = 0; i < frmFields.length; i++) {
-        frmFields[i].parentNode.classList.remove("error");
-    }
 
     // validate form fields
     for (var i = 0; i < frmFields.length; i++) {
@@ -35,19 +63,33 @@ function sendContactMessage(frm) {
         // clean blank spaces around the string
         fieldValue = frmFields[i].value.trim();
 
+        fieldWrapper = frmFields[i].parentNode;
+
         if (fieldValue === "") {
 
-            // register field error
-            frmFields[i].parentNode.classList.add("error");
+            _setValidationError(fieldWrapper, "campo obrigatório");
 
             // register flag from form error
             if (frmIsValid) {
                 frmIsValid = false;
             }
         }
+
+        // clean field error
+        else {
+            if (frmFields[i].type === "email") {
+                if (_isValidEmail(frmFields[i].value)) {
+                    _removeValidationError(fieldWrapper);
+                } else {
+                    _setValidationError(fieldWrapper, "e-mail inválido");
+                }
+            } else {
+                _removeValidationError(fieldWrapper);
+            }
+        }
     }
 
-    if (!frmIsValid) {
+    if (frmIsValid) {
 
         htmlOutput += "<div id=\"sent-message\">";
         htmlOutput += "<i class=\"ok\"></i>";
