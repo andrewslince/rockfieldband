@@ -13,24 +13,29 @@ quote:
   author: "Ozzy Osbourne"
 
 # Members
-members_line_one:
+members:
+
+  # First line
   -
-    name: "Andrews Lince"
-    img: "kaka.jpg"
-    instrument: "Vocal"
+    -
+      name: "Andrews Lince"
+      img: "kaka.jpg"
+      instrument: "Vocal"
+    -
+      name: "Carlos Souza"
+      img: "carlos.jpg"
+      instrument: "Bateria"
+
+  # Second line
   -
-    name: "Carlos Souza"
-    img: "carlos.jpg"
-    instrument: "Bateria"
-members_line_two:
-  -
-    name: "Paulo Najar"
-    img: "paulo.jpg"
-    instrument: "Guitarra"
-  -
-    name: "Ricardo Morais"
-    img: "ricardo.jpg"
-    instrument: "Baixo"
+    -
+      name: "Paulo Najar"
+      img: "paulo.jpg"
+      instrument: "Guitarra"
+    -
+      name: "Ricardo Morais"
+      img: "ricardo.jpg"
+      instrument: "Baixo"
 
 # Social network
 social_networks:

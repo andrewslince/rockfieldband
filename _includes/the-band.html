@@ -22,22 +22,17 @@
         consequuntur cupiditate.
       </p>
       <h3>integrantes</h3>
-      <ul class="members">
-        {% for member in site.members_line_one %}
-          <li>
-            <img src="/img/blank.gif" data-echo="/img/{{ member.img }}" width="413" height="413" class="lazy" alt="{{ member.name }}">
-            <h4>{{ member.name }} <em>&raquo;</em> <strong>{{ member.instrument }}</strong></h4>
-          </li>
-        {% endfor %}
-      </ul>
-      <ul class="members">
-        {% for member in site.members_line_two %}
-          <li>
-            <img src="/img/blank.gif" data-echo="/img/{{ member.img }}" width="413" height="413" class="lazy" alt="{{ member.name }}">
-            <h4>{{ member.name }} <em>&raquo;</em> <strong>{{ member.instrument }}</strong></h4>
-          </li>
-        {% endfor %}
-      </ul>
+
+      {% for listMember in site.members %}
+        <ul class="members">
+          {% for member in listMember %}
+            <li>
+              <img src="/img/blank.gif" data-echo="/img/{{ member.img }}" width="413" height="413" class="lazy" alt="{{ member.name }}">
+              <h4>{{ member.name }} <em>&raquo;</em> <strong>{{ member.instrument }}</strong></h4>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </div>
 </section>
