@@ -1,69 +1,74 @@
-.logo {
-    margin: 20px auto 0 auto;
-    display: block;
-    color: transparent !important;
-    outline: none;
-    @include transition;
-
-    &:hover,
-    &:focus {
-        @include rotate45;
-    }
-}
-
-
 /**
- * Menu Navigation
+ * Header
  */
-.nav {
+.header {
 
-    margin-top: 20px;
-    text-align: center;
+    .logo {
+        margin: 20px auto 0 auto;
+        display: block;
+        color: transparent !important;
+        outline: none;
+        @include transition;
 
-    @include transition;
-
-    span {
-        display: none;
-    }
-
-    ul {
-
-        li {
-
-            display: inline;
-
-            a {
-                color: #fff;
-                line-height: $base-line-height;
-                text-transform: uppercase;
-                font-family: "CaviarDreams";
-                font-size: 28px;
-                text-decoration: none;
-                padding-bottom: 3px;
-                outline: none;
-                margin-left: 60px;
-
-                &:hover,
-                &:focus {
-                    color:$orange-color !important;
-                    text-shadow: #000 2px 2px 1px;
-                }
-            }
-
-            &:first-child a {
-                margin-left: 0;
-            }
+        &:hover,
+        &:focus {
+            @include rotate45;
         }
     }
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
+    /**
+     * Menu Navigation
+     */
+    .nav {
+
+        margin-top: 20px;
+        text-align: center;
+
+        @include transition;
+
+        span {
+            display: none;
+        }
+
+        ul {
+
+            li {
+
+                display: inline;
+
+                a {
+                    color: #fff;
+                    line-height: $base-line-height;
+                    text-transform: uppercase;
+                    font-family: "CaviarDreams";
+                    font-size: 28px;
+                    text-decoration: none;
+                    padding-bottom: 3px;
+                    outline: none;
+                    margin-left: 60px;
+
+                    &:hover,
+                    &:focus {
+                        color:$orange-color !important;
+                        text-shadow: #000 2px 2px 1px;
+                    }
+                }
+
+                &:first-child a {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @include media-query($on-palm) {
+            position: absolute;
+            top: 9px;
+            right: 30px;
+            background-color: $background-color;
+            border: 1px solid $grey-color-light;
+            border-radius: 5px;
+            text-align: right;
+        }
     }
 
     /**
@@ -75,32 +80,46 @@
         top: 0 !important;
         left:0;
         margin-top: 0;
-        width: 100%;
-        z-index: 2;
         padding: 20px;
         opacity: 0.98;
+        width: 100%;
+        z-index: 2;
 
         @include transition;
 
-        span {
+        .wrapper {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .logo {
+            background-image: none;
+            color: #f39101 !important;
             float: left;
             font-size: 25px;
             font-weight: bold;
-            color: $orange-color;
             font-family: "CaviarDreams";
-            margin-left: 10px;
-            display: block;
+            text-indent: 0;
+            margin: 0;
+            height: auto;
+            padding-left: 10px;
+
+            @include no-rotate45;
         }
 
-        ul {
-            text-align: right;
-            margin-bottom: 0;
-            padding-right: 20px;
+        .nav {
+            margin: 0;
 
-            li a {
-                font-size: 18px;
-                margin-left: 40px;
-                line-height: 35px;
+            ul {
+                text-align: right;
+                margin-bottom: 0;
+                padding-right: 10px;
+
+                li a {
+                    font-size: 18px;
+                    margin-left: 40px;
+                    line-height: 35px;
+                }
             }
         }
     }

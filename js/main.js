@@ -128,9 +128,9 @@ function sendContactMessage(frm) {
 }
 
 function menuNav(target) {
-    var discount = (document.querySelector("nav").classList.contains("floating"))
+    var discount = (document.querySelector("header").classList.contains("floating"))
         ? -110
-        : -190;
+        : -425;
 
     smoothScroll.init({
         target   : target,
@@ -150,18 +150,19 @@ function goToTop() {
 }
 
 window.addEventListener("scroll", function(event) {
-    var top = (window.pageYOffset || document.documentElement.scrollTop);
+    var doc = document,
+        top = (window.pageYOffset || doc.documentElement.scrollTop);
 
     // displays go to the top
-    document.getElementById("go-to-top").style.display = (top > 1000)
+    doc.getElementById("go-to-top").style.display = (top > 1000)
         ? "block"
         : "none";
 
     // displays floating menu navigation
-    if (top > 300) {
-        document.querySelector("nav").classList.add("floating");
+    if (top > 200) {
+        doc.querySelector("header").classList.add("floating");
     } else {
-        document.querySelector("nav").classList.remove("floating");
+        doc.querySelector("header").classList.remove("floating");
     }
 }, false);
 

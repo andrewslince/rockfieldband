@@ -84,6 +84,16 @@ $on-laptop:        800px;
 }
 
 
+// Remove animate element to rotate in 45
+@mixin no-rotate45 {
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+}
+
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
     "reset",
