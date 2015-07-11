@@ -5,6 +5,19 @@
         @include no-rotate45;
         @include no-transition;
     }
+
+    .contact {
+        .row {
+            .submit {
+                &:hover,
+                &:focus {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include media-query($on-laptop) {
@@ -153,6 +166,24 @@
         }
     }
 
+    .contact {
+        .required-fields {
+            font-size: 19px;
+        }
+
+        #sent-message {
+            padding-top: 50px;
+
+            h4 {
+                line-height: 40px;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
     .section {
 
 
@@ -217,6 +248,13 @@
     .social-media.bar {
         display: none !important;
     }
+
+    .contact {
+        .required-fields {
+            padding: 0 0 0 0;
+            width: 100px;
+        }
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -265,7 +303,7 @@
     only screen 
     and (min-width : 1824px)
 {
-
+    
 }
 
 /* iPhone 4 ----------- */
