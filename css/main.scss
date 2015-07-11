@@ -41,14 +41,12 @@ $on-laptop:        800px;
     }
 }
 
-
 // Apply full round style
 @mixin full-radius {
     -webkit-border-radius: 300px;
        -moz-border-radius: 300px;
             border-radius: 300px;
 }
-
 
 // Apply transition
 @mixin transition {
@@ -58,6 +56,14 @@ $on-laptop:        800px;
             transition: all 200ms ease 0.1s;
 }
 
+// Remove transition
+@mixin no-transition {
+    -webkit-transition: none;
+       -moz-transition: none;
+         -o-transition: none;
+            transition: none;
+}
+
 // Increase element size on the scale from 1.3
 @mixin scale1-3 {
     -webkit-transform: scale(1.3);  /* Chrome, Opera 15+, Safari 3.1+ */
@@ -65,14 +71,12 @@ $on-laptop:        800px;
             transform: scale(1.3);  /* Firefox 16+, IE 10+, Opera */
 }
 
-
 // Common styles for the social media icons
 @mixin hover-social-icon {
     background-color: #fff;
     outline: none;
     @include scale1-3;
 }
-
 
 // Animate element to rotate in 45
 @mixin rotate45 {
@@ -83,7 +87,6 @@ $on-laptop:        800px;
             transform: rotate(45deg);  /* Firefox 16+, IE 10+, Opera */
 }
 
-
 // Remove animate element to rotate in 45
 @mixin no-rotate45 {
     -webkit-transform: none;
@@ -93,10 +96,10 @@ $on-laptop:        800px;
             transform: none;
 }
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
     "reset",
     "base",
-    "layout"
+    "layout",
+    "responsive"
 ;
