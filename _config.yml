@@ -1,5 +1,14 @@
 # Exclude paths and files during build project
-exclude: [ node_modules ]
+exclude: [
+  "node_modules",
+  "img/src-sprite",
+  "js/app.js",
+  "js/smooth-scroll.js",
+  "js/echo.js",
+  "Gruntfile.js",
+  "package.json",
+  "readme.md"
+]
 
 # Site settings
 title: Rockfield Band

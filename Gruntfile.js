@@ -84,17 +84,6 @@ module.exports = function(grunt) {
             }
         },
 
-        uncss: {
-            options: {
-                report: 'gzip',
-                htmlroot : '_site'
-            },
-            dist: {
-                src: '_site/index.html',
-                dest: '_site/css/main.css'
-            }
-        },
-
         watch: {
             options: {
                 event: ['changed', 'added', 'deleted']
@@ -157,7 +146,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-exec');
 
     // register tasks
@@ -165,11 +153,10 @@ module.exports = function(grunt) {
     grunt.registerTask('w', [ 'watch' ]);
     grunt.registerTask('deploy', [
         'exec:build',
-        'uncss',
-        'cssmin',
-        'imagemin',
-        'htmlmin',
         'uglify',
+        'htmlmin',
+        'imagemin',
+        'cssmin',
         'exec:deploy'
     ]);
 };
