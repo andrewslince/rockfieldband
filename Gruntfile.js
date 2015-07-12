@@ -64,9 +64,9 @@ module.exports = function(grunt) {
         concat : {
             scripts : {
                 src : [
-                    '_site/js/smooth-scroll.js',
-                    '_site/js/echo.js',
-                    '_site/js/app.js'
+                    'js/smooth-scroll.js',
+                    'js/echo.js',
+                    'js/app.js'
                 ],
                 dest : '_site/js/main.js',
             }
@@ -76,9 +76,9 @@ module.exports = function(grunt) {
             target : {
                 files : {
                     '_site/js/main.js' : [
-                        '_site/js/smooth-scroll.js',
-                        '_site/js/echo.js',
-                        '_site/js/app.js'
+                        'js/smooth-scroll.js',
+                        'js/echo.js',
+                        'js/app.js'
                     ]
                 }
             }
