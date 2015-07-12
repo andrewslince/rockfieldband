@@ -1,3 +1,6 @@
+# Exclude paths and files during build project
+exclude: [ node_modules ]
+
 # Site settings
 title: Rockfield Band
 email: rockfieldshow@gmail.com
