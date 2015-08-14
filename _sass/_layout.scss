@@ -120,8 +120,6 @@
  * Social Media
  */
 .social-media {
-
-
     ul {
 
         li {
@@ -320,6 +318,16 @@
         &:last-child {
           margin-bottom: 0;
         }
+    }
+
+    .influence-list {
+        margin: 0 0 20px 20px;
+    }
+
+    .influence {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 
