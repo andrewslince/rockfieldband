@@ -149,7 +149,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
 
     // register tasks
-    grunt.registerTask('default', [ 'exec:build' ]);
+    grunt.registerTask('default', [ 'exec:build', 'concat' ]);
     grunt.registerTask('w', [ 'watch' ]);
     grunt.registerTask('deploy', [
         'exec:build',
