@@ -1,2 +1,4 @@
 RewriteEngine On
-RewriteBase /rockfieldband/_site/
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^rockfieldband.com$ [NC]
+RewriteRule ^(.*)$ http://rockfieldband.com/$1 [L,R=301]
