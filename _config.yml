@@ -19,6 +19,11 @@ url: "http://rockfieldband.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
+# SEO
+seo:
+  description: "Banda de rock criada em Manaus, no Amazonas com repertório autoral e cover (nacional e internacional) que vai desde a década de 70 até os anos 2000."
+  keywords: "rockfield, rockfieldband, rockfield band, rock, music, música"
+
 # Quote phrase
 quote:
   phrase: "O Rock n' Roll é o maior amor da minha vida, pois foi através dele que cheguei a todos os outros."
